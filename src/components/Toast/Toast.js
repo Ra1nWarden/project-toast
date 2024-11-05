@@ -18,7 +18,7 @@ const ICONS_BY_VARIANT = {
   error: AlertOctagon,
 };
 
-function Toast({ variant = "notice", message, onClose }) {
+function Toast({ variant, message, onClose }) {
   const IconType = ICONS_BY_VARIANT[variant];
   return (
     <div className={`${styles.toast} ${styles[variant]}`}>
