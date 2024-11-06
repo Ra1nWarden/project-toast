@@ -6,9 +6,7 @@ export const ToastContext = React.createContext();
 function ToastProvider({ children }) {
   const [toasts, setToasts] = React.useState([]);
   function dismissAllToasts(event) {
-    if (event.key === "Escape") {
-      setToasts([]);
-    }
+    setToasts([]);
   }
   useEscapeKey(dismissAllToasts);
 
